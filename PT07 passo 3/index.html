@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+ <script>
+ 
+var localizacao1 = 3;
+
+var localizacao2 = 4;
+
+var localizacao3 = 5;
+
+var tentativa;
+
+var acertos = 0;
+var tentativas = 0;
+var afundado = false;
+while (afundado == false) {
+tentativa = prompt("Preparado, atirar! (introduza m numero de 0-6):");
+if (tentativa < 0 || tentativa > 6) {
+alert("Introduz um número valido por favor!");
+} else {
+tentativas = tentativas + 1;
+if (tentativas == localizacao1 || tentativas == localizacao2 || tentativas == localizacao3) {
+alert("Acertaste!");
+acertos = acertos + 1;
+if (acertos == 3) {
+afundado = true;
+alert("Afundaste o meu navio!");
+}
+} else {
+alert("Erraste");
+}
+}
+}
+var estatisticas = "tu levaste " + tentativas + " tentativas para afundar o meu navio, " +
+"o que signigica que a tua pontaria foi " + (3/tentativas);
+alert(estatisticas);
+</script>
+
+
+    </body>
+
+</html>
